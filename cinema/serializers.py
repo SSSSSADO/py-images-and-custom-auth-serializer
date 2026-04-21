@@ -147,7 +147,7 @@ class TicketSeatsSerializer(TicketSerializer):
 
 
 class MovieSessionDetailSerializer(MovieSessionSerializer):
-    movie = MovieListSerializer(read_only=True)
+    movie = MovieDetailSerializer(read_only=True)
     cinema_hall = CinemaHallSerializer(read_only=True)
     taken_places = TicketSeatsSerializer(
         source="tickets", many=True, read_only=True
