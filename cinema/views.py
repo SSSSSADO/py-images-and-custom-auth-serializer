@@ -115,7 +115,7 @@ class MovieViewSet(
         permission_classes=[IsAdminUser],
         url_path="upload-image"
     )
-    def upload_image(self, request, pk = None):
+    def upload_image(self, request, pk=None):
         movie = self.get_object()
         serializer = self.get_serializer(movie, data=request.data)
         serializer.is_valid(raise_exception=True)

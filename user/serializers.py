@@ -51,7 +51,7 @@ class AuthTokenSerializer(serializers.Serializer):
 
         user = authenticate(
             request=self.context.get("request"),
-            email=email,
+            username=email,
             password=password
         )
 
